@@ -46,6 +46,8 @@ btnStart.addEventListener('click',function(){
     if (timerInterval !== null)
          return;
     timerInterval = setInterval(updateTime, 10);   // setInterval 
+    btnStart.style.display = 'none';
+    btnPause.style.display = 'inline-block';
 });
 // 2- Pause حدث ال 
 btnPause.addEventListener('click', function() {
@@ -78,6 +80,7 @@ btnReset.addEventListener('click', function() {
      secondsDisplay.textContent='00 :';
      mSecondsDisplay.textContent='00';
 
-     btnPause.style.display='none';
+     btnRresume.style.display='none';
      btnPause.style.display='block';
+     btnStart.style.display = 'block';
 });
